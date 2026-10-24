@@ -18,6 +18,8 @@
 <title>Naisthetic Center · Uñas y estética en Palencia</title>
 <title>Naisthetic Center · Uñas y estética en Palencia</title>
 <title>Naisthetic Center · Uñas y estética en Palencia</title>
+<title>Naisthetic Center · Uñas y estética en Palencia</title>
+<title>Naisthetic Center · Uñas y estética en Palencia</title>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"NailSalon","name":"Naisthetic Center","description":"Estudio de uñas y estética en Palencia: manicura semipermanente, uñas acrílicas, nail art, pedicura, cejas, pestañas, facial y depilación.","url":"https://dnsue01.github.io/naistheticcenter/","image":"https://dnsue01.github.io/naistheticcenter/img/og.jpg","telephone":"+34684216709","priceRange":"6 € – 50 €","address":{"@type":"PostalAddress","streetAddress":"C. Doña Sol y Doña Elvira, 12","postalCode":"34004","addressLocality":"Palencia","addressCountry":"ES"},"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"10:00","closes":"14:00"},{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"16:00","closes":"20:00"},{"@type":"OpeningHoursSpecification","dayOfWeek":"Saturday","opens":"10:00","closes":"14:00"}],"sameAs":["https://www.instagram.com/naistheticcenter/","https://www.tiktok.com/@nai_estetica"]}</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gloock&family=Manrope:wght@300;400;500;600;700&display=swap">
@@ -61,13 +63,13 @@ h2 em,h1 em{font-style:italic;color:var(--teal)}
 .btn:hover{transform:translateY(-2px)}
 .btn-teal{background:var(--teal);color:#fff}
 .btn-teal:hover{background:var(--teal-deep)}
-.btn-line{border-color:#c3d2cf;color:var(--fg)}
+.btn-line{border-color:#c3d2cf;color:var(--fg);background:transparent}
 .btn-line:hover{border-color:var(--teal);color:var(--teal)}
 .sec{padding-block:100px}
 .sec-head{display:flex;justify-content:space-between;align-items:flex-end;gap:28px;flex-wrap:wrap;margin-bottom:44px}
 .sec-head h2{font-size:clamp(2.6rem,5.4vw,4.2rem);letter-spacing:-.015em}
 .sec-head p{max-width:30em;color:var(--soft);margin:0}
-@media (max-width:700px){.sec{padding-block:68px}}
+@media (max-width:700px){.sec{padding-block:60px}.sec-head{margin-bottom:28px}.sec-head h2{font-size:2.5rem}.hero h1{font-size:3.2rem}.hero p.lead{font-size:1rem}.ctas .btn{flex:1 1 auto}}
 
 /* Header */
 .bar{background:var(--bg-2);color:var(--soft);font-size:.78rem;border-bottom:1px solid var(--line)}
@@ -113,6 +115,8 @@ nav.main a:hover{color:var(--teal)}
 .strip .it:first-child{border-left:0;padding-left:0}
 .ic{flex:none;display:grid;place-items:center;color:var(--teal)}
 .ic svg{width:22px;height:22px;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+.strip a.it{transition:background .2s}
+.strip a.it:hover b{color:var(--teal)}
 .strip b{display:block;font-weight:600;font-size:.95rem}
 .strip small{display:block;color:var(--soft);font-size:.82rem}
 @media (max-width:780px){.strip .wrap{grid-template-columns:1fr}.strip .it{border-left:0;border-top:1px solid var(--line);padding:16px 0}.strip .it:first-child{border-top:0}}
@@ -168,8 +172,23 @@ nav.main a:hover{color:var(--teal)}
 .svc.on .pick{background:var(--teal);color:#fff;border-color:var(--teal)}
 .empty{grid-column:1/-1;padding:32px;text-align:center;color:var(--soft);border:1px dashed var(--line);border-radius:14px}
 @media (max-width:860px){.svc-list{grid-template-columns:1fr}}
-@media (max-width:420px){.svc{grid-template-columns:minmax(0,1fr) auto}.svc .pick{grid-column:1/-1;grid-row:auto;justify-self:start;margin-top:6px}.svc .price{grid-row:1/span 2}}
+@media (max-width:520px){.svc{grid-template-columns:minmax(0,1fr) auto;gap:4px 14px;padding:16px 2px}.svc .price{grid-row:1;grid-column:2;font-size:1.4rem;justify-self:end}.svc .pick{grid-row:2;grid-column:2;justify-self:end;min-height:40px;padding:6px 14px}.svc .meta{grid-row:2}}
 
+/* CTA en línea */
+.cta-row{display:flex;justify-content:space-between;align-items:center;gap:16px 24px;flex-wrap:wrap;margin-top:32px;padding:22px 24px;border-radius:16px;background:var(--bg-2);border:1px solid var(--line)}
+.services .cta-row,.visit .cta-row{background:var(--card)}
+.cta-row b{display:block;font-family:var(--display);font-weight:400;font-size:1.5rem;line-height:1.15}
+.cta-row span{display:block;color:var(--soft);font-size:.92rem;margin-top:4px}
+.qa .cta-row{margin-top:24px}
+.more{display:none;width:100%;margin-top:16px}
+@media (max-width:640px){
+  .cta-row{padding:20px 18px}
+  .cta-row .ctas{width:100%}
+  .cta-row .ctas .btn{flex:1 1 100%}
+  .more{display:flex}
+  .gallery.collapsed .shot:nth-child(n+6){display:none}
+  .svc-list.collapsed .svc:nth-child(n+9){display:none}
+}
 /* Destacados */
 .feat{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;margin-bottom:56px}
 .fcard{appearance:none;border:1px solid var(--line);background:var(--card);border-radius:14px;padding:0;overflow:hidden;cursor:pointer;text-align:left;display:flex;flex-direction:column;transition:border-color .2s,box-shadow .2s,transform .2s;font:inherit;color:inherit;min-width:0}
@@ -323,6 +342,8 @@ footer .wrap{padding-block:30px;display:flex;justify-content:space-between;align
 .mcta{display:none}
 @media (max-width:700px){
   .mcta{display:grid;grid-template-columns:1fr 1fr;gap:8px;position:fixed;z-index:25;left:max(12px,env(safe-area-inset-left,0px));right:max(12px,env(safe-area-inset-right,0px));bottom:calc(10px + env(safe-area-inset-bottom,0px))}
+  .mcta{transition:transform .3s cubic-bezier(.16,1,.3,1),opacity .3s}
+  .mcta.off{transform:translateY(140%);opacity:0;pointer-events:none}
   .mcta .btn{box-shadow:0 10px 26px rgba(18,32,32,.2);padding:14px 10px;font-size:.88rem}
   body{padding-bottom:76px}
 }
@@ -375,9 +396,9 @@ footer .wrap{padding-block:30px;display:flex;justify-content:space-between;align
 
   <div class="strip" aria-label="Información del centro">
     <div class="wrap">
-      <div class="it"><span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span><div><b>Lun–Vie · 10–14 y 16–20</b><small>Sábados 10–14 · Domingo cerrado</small></div></div>
-      <div class="it"><span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M20 10c0 5-8 12-8 12S4 15 4 10a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="2.5"/></svg></span><div><b>C. Doña Sol y Doña Elvira, 12</b><small>34004 Palencia</small></div></div>
-      <div class="it"><span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 0 0-7.8 7.8L12 21l8.8-8.6a5.5 5.5 0 0 0 0-7.8Z"/></svg></span><div><b>Cita confirmada por Naiara</b><small>Reserva rápida por WhatsApp</small></div></div>
+      <a class="it" href="#reservar"><span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span><div><b>Lun–Vie · 10–14 y 16–20</b><small>Sábados 10–14 · Ver huecos</small></div></a>
+      <a class="it" href="https://www.google.com/maps/search/?api=1&amp;query=C.%20Do%C3%B1a%20Sol%20y%20Do%C3%B1a%20Elvira%2C%2012%2C%2034004%20Palencia" target="_blank" rel="noopener"><span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M20 10c0 5-8 12-8 12S4 15 4 10a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="2.5"/></svg></span><div><b>C. Doña Sol y Doña Elvira, 12</b><small>Palencia · Cómo llegar</small></div></a>
+      <a class="it" href="https://wa.me/34684216709?text=Hola%2C%20Naiara.%20Me%20gustar%C3%ADa%20pedir%20cita%20en%20Naisthetic%20Center.%20%C2%BFQu%C3%A9%20huecos%20tienes%3F" target="_blank" rel="noopener"><span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 0 0-7.8 7.8L12 21l8.8-8.6a5.5 5.5 0 0 0 0-7.8Z"/></svg></span><div><b>Cita confirmada por Naiara</b><small>Escríbele por WhatsApp</small></div></a>
     </div>
   </div>
 
@@ -401,6 +422,8 @@ footer .wrap{padding-block:30px;display:flex;justify-content:space-between;align
         <figure class="shot"><img src="img/n8.webp" alt="Uñas con flores y tonos rosa y turquesa" loading="lazy"><figcaption>Color y fantasía</figcaption></figure>
         <figure class="shot"><img src="img/n9.webp" alt="Manicura nude con animal print y pedrería" loading="lazy"><figcaption>Nude y animal print</figcaption></figure>
       </div>
+      <button type="button" class="btn btn-line more" id="gMore" aria-controls="gallery" aria-expanded="false">Ver más trabajos</button>
+      <div class="cta-row"><div><b>¿Te gusta alguno?</b><span>Pídeselo a Naiara tal cual o con tu toque.</span></div><div class="ctas"><a class="btn btn-wa" href="https://wa.me/34684216709?text=Hola%2C%20Naiara.%20He%20visto%20tus%20trabajos%20en%20la%20web%20y%20me%20gustar%C3%ADa%20pedirte%20un%20dise%C3%B1o.%20%C2%BFQu%C3%A9%20huecos%20tienes%3F" target="_blank" rel="noopener"><svg class="wa" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6a2.7 2.7 0 0 0 1.8-1.2 2.2 2.2 0 0 0 .2-1.3c-.1-.1-.3-.2-.5-.3Z"/></svg>Pedir mi diseño</a><a class="btn btn-line" href="#servicios">Ver precios</a></div></div>
       <div class="g-foot">
         <span>Más trabajos y novedades en sus redes:</span>
         <div class="socials">
@@ -432,6 +455,8 @@ footer .wrap{padding-block:30px;display:flex;justify-content:space-between;align
       </div>
       <div class="filters" id="filters" role="group" aria-label="Filtrar por categoría"></div>
       <div class="svc-list" id="list"></div>
+      <button type="button" class="btn btn-line more" id="lMore" aria-controls="list" aria-expanded="false">Ver todos los servicios</button>
+      <div class="cta-row"><div><b>¿No sabes cuál elegir?</b><span>Cuéntale a Naiara lo que buscas y te recomienda.</span></div><div class="ctas"><a class="btn btn-wa" href="https://wa.me/34684216709?text=Hola%2C%20Naiara.%20No%20s%C3%A9%20qu%C3%A9%20servicio%20elegir%2C%20%C2%BFme%20ayudas%3F%20Me%20gustar%C3%ADa%E2%80%A6" target="_blank" rel="noopener"><svg class="wa" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6a2.7 2.7 0 0 0 1.8-1.2 2.2 2.2 0 0 0 .2-1.3c-.1-.1-.3-.2-.5-.3Z"/></svg>Preguntar a Naiara</a></div></div>
     </div>
   </section>
 
@@ -454,6 +479,7 @@ footer .wrap{padding-block:30px;display:flex;justify-content:space-between;align
           <button type="button" class="mnav" id="carN" aria-label="Opinión siguiente"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="m6 3 5 5-5 5"/></svg></button>
         </div>
       </div>
+      <div class="cta-row"><div><b>Vive la experiencia tú también</b><span>Elige tu tratamiento y reserva en un minuto.</span></div><div class="ctas"><a class="btn btn-teal" href="#reservar" data-s="manicura-semi">Reservar semipermanente · 17 €</a><a class="btn btn-line" href="#servicios">Ver todos</a></div></div>
     </div>
   </section>
 
@@ -545,6 +571,7 @@ footer .wrap{padding-block:30px;display:flex;justify-content:space-between;align
         <details><summary>¿Puedo llevar mi propio diseño?</summary><p>Sí. Trae una foto o enséñale una de la galería y Naiara lo adapta a tus uñas.</p></details>
         <details><summary>¿Hacéis depilación para hombre?</summary><p>Sí: medias piernas, piernas completas, axilas, brazos y pecho, con cera.</p></details>
         <details><summary>¿Puedo regalar una sesión?</summary><p>Sí, con la tarjeta regalo: elige un importe o un tratamiento y Naiara te la prepara.</p></details>
+        <div class="cta-row"><div><b>¿Otra duda?</b><span>Naiara te responde por WhatsApp.</span></div><div class="ctas"><a class="btn btn-wa" href="https://wa.me/34684216709?text=Hola%2C%20Naiara.%20Tengo%20una%20duda%3A%20" target="_blank" rel="noopener"><svg class="wa" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6a2.7 2.7 0 0 0 1.8-1.2 2.2 2.2 0 0 0 .2-1.3c-.1-.1-.3-.2-.5-.3Z"/></svg>Preguntar</a></div></div>
       </div>
     </div>
   </section>
@@ -574,6 +601,7 @@ footer .wrap{padding-block:30px;display:flex;justify-content:space-between;align
         <div>
           <h3>Escríbenos</h3>
           <p>WhatsApp: <b style="color:var(--fg);user-select:all">+34 684 21 67 09</b></p>
+          <p><a class="btn btn-wa" href="https://wa.me/34684216709?text=Hola%2C%20Naiara.%20Me%20gustar%C3%ADa%20pedir%20cita%20en%20Naisthetic%20Center." target="_blank" rel="noopener"><svg class="wa" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6a2.7 2.7 0 0 0 1.8-1.2 2.2 2.2 0 0 0 .2-1.3c-.1-.1-.3-.2-.5-.3Z"/></svg>Abrir WhatsApp</a></p>
           <p>Instagram: <a class="tlink" href="https://www.instagram.com/naistheticcenter/" target="_blank" rel="noopener">@naistheticcenter</a><br>TikTok: <a class="tlink" href="https://www.tiktok.com/@nai_estetica" target="_blank" rel="noopener">@nai_estetica</a></p>
         </div>
       </div>
@@ -681,9 +709,9 @@ footer .wrap{padding-block:30px;display:flex;justify-content:space-between;align
     b.innerHTML=l.length?l.map(function(t){return'<button type="button" class="slot'+(st.time===t?' sel':'')+'" data-t="'+t+'" aria-pressed="'+(st.time===t)+'">'+t+'</button>'}).join(''):'<p class="muted">No quedan horas ese día. Elige otra fecha.</p>'}
   function choose(id){st.id=id;st.date='';st.time='';renderList();renderChosen();renderExtra();renderCal();renderSlots();$('result').hidden=true;$('reservar').scrollIntoView({behavior:'smooth',block:'start'})}
 
-  $('filters').addEventListener('click',function(e){var b=e.target.closest('[data-c]');if(!b)return;cat=b.getAttribute('data-c');renderFilters();renderList()});
+  $('filters').addEventListener('click',function(e){var b=e.target.closest('[data-c]');if(!b)return;lst.classList.remove('collapsed');$('lMore').hidden=true;cat=b.getAttribute('data-c');renderFilters();renderList()});
   document.addEventListener('click',function(e){var b=e.target.closest('[data-s]');if(b){e.preventDefault();choose(b.getAttribute('data-s'))}});
-  $('q').addEventListener('input',renderList);
+  $('q').addEventListener('input',function(){lst.classList.remove('collapsed');$('lMore').hidden=true;renderList()});
   $('fExtra').addEventListener('change',function(){renderTotal();renderCal();renderSlots()});
   $('cal').addEventListener('click',function(e){var m=e.target.closest('[data-m]'),d=e.target.closest('[data-d]');if(m&&!m.disabled){month=new Date(month.getFullYear(),month.getMonth()+Number(m.getAttribute('data-m')),1);renderCal()}else if(d&&!d.disabled){st.date=d.getAttribute('data-d');st.time='';renderCal();renderSlots()}});
   $('slots').addEventListener('click',function(e){var b=e.target.closest('[data-t]');if(!b)return;st.time=b.getAttribute('data-t');renderSlots()});
@@ -712,6 +740,13 @@ footer .wrap{padding-block:30px;display:flex;justify-content:space-between;align
   $('lb').addEventListener('click',function(e){if(e.target===$('lb'))close()});
   document.addEventListener('keydown',function(e){if($('lb').hidden)return;if(e.key==='Tab'){var f=[$('lbX'),$('lbP'),$('lbW'),$('lbN')],i=f.indexOf(document.activeElement);e.preventDefault();var n=e.shiftKey?(i<=0?f.length-1:i-1):(i+1)%f.length;f[n].focus();return}if(e.key==='Escape')close();if(e.key==='ArrowLeft')show(cur-1);if(e.key==='ArrowRight')show(cur+1)});
 
+  // Colapsar en móvil
+  var gal=$('gallery'),lst=$('list');gal.classList.add('collapsed');lst.classList.add('collapsed');
+  $('gMore').addEventListener('click',function(){gal.classList.remove('collapsed');this.hidden=true;this.setAttribute('aria-expanded','true')});
+  $('lMore').addEventListener('click',function(){lst.classList.remove('collapsed');this.hidden=true;this.setAttribute('aria-expanded','true')});
+  // Ocultar barra fija cuando ya se está reservando
+  var bar=document.querySelector('.mcta');
+  if(bar&&'IntersectionObserver' in window){var vis=new Set();var io=new IntersectionObserver(function(es){es.forEach(function(e){e.isIntersecting?vis.add(e.target):vis.delete(e.target)});bar.classList.toggle('off',vis.size>0)},{threshold:.15});['reservar','inicio-hero'].forEach(function(id){var el=$(id);if(el)io.observe(el)});var fin=document.querySelector('.final');if(fin)io.observe(fin)}
   // Carrusel de opiniones
   var tr=$('carTrack'),cards=[].slice.call(tr.children),dots=$('carDots');
   function per(){var c=cards[0].getBoundingClientRect().width;return Math.max(1,Math.round(tr.clientWidth/(c+16)))}
@@ -723,6 +758,14 @@ footer .wrap{padding-block:30px;display:flex;justify-content:space-between;align
   var rt;tr.addEventListener('scroll',function(){clearTimeout(rt);rt=setTimeout(drawDots,80)});
   tr.addEventListener('keydown',function(e){if(e.key==='ArrowRight'){e.preventDefault();go(idx()+1)}if(e.key==='ArrowLeft'){e.preventDefault();go(idx()-1)}});
   window.addEventListener('resize',drawDots);drawDots();
+  var reduce=matchMedia('(prefers-reduced-motion: reduce)').matches,timer=null,hold=false;
+  function tick(){if(hold||document.hidden)return;var i=idx();go(i>=pages()-1?0:i+1)}
+  function start(){if(reduce)return;clearInterval(timer);timer=setInterval(tick,5000)}
+  ['pointerenter','touchstart','focusin'].forEach(function(ev){tr.addEventListener(ev,function(){hold=true},{passive:true})});
+  ['pointerleave','focusout'].forEach(function(ev){tr.addEventListener(ev,function(){hold=false})});
+  tr.addEventListener('touchend',function(){setTimeout(function(){hold=false},4000)},{passive:true});
+  $('carP').addEventListener('click',start);$('carN').addEventListener('click',start);
+  start();
 
   renderFilters();renderList();renderChosen();renderExtra();renderCal();renderSlots();
 })();
