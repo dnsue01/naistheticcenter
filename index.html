@@ -17,6 +17,7 @@
 <title>Naisthetic Center · Uñas y estética en Palencia</title>
 <title>Naisthetic Center · Uñas y estética en Palencia</title>
 <title>Naisthetic Center · Uñas y estética en Palencia</title>
+<title>Naisthetic Center · Uñas y estética en Palencia</title>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"NailSalon","name":"Naisthetic Center","description":"Estudio de uñas y estética en Palencia: manicura semipermanente, uñas acrílicas, nail art, pedicura, cejas, pestañas, facial y depilación.","url":"https://dnsue01.github.io/naistheticcenter/","image":"https://dnsue01.github.io/naistheticcenter/img/og.jpg","telephone":"+34684216709","priceRange":"6 € – 50 €","address":{"@type":"PostalAddress","streetAddress":"C. Doña Sol y Doña Elvira, 12","postalCode":"34004","addressLocality":"Palencia","addressCountry":"ES"},"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"10:00","closes":"14:00"},{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"16:00","closes":"20:00"},{"@type":"OpeningHoursSpecification","dayOfWeek":"Saturday","opens":"10:00","closes":"14:00"}],"sameAs":["https://www.instagram.com/naistheticcenter/","https://www.tiktok.com/@nai_estetica"]}</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gloock&family=Manrope:wght@300;400;500;600;700&display=swap">
@@ -157,7 +158,7 @@ nav.main a:hover{color:var(--teal)}
 .filters button[aria-pressed="true"]{background:var(--teal);border-color:var(--teal);color:#fff}
 .svc-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 40px}
 .svc{display:grid;grid-template-columns:minmax(0,1fr) auto auto;gap:6px 18px;align-items:center;padding:18px 4px;border-bottom:1px solid var(--line)}
-.svc h3{font-family:var(--body);font-size:.98rem;font-weight:600;line-height:1.35}
+.svc h3{font-family:var(--body);font-size:.98rem;font-weight:600;line-height:1.35;overflow-wrap:anywhere;text-wrap:pretty}
 .svc .meta{grid-column:1;font-size:.8rem;color:var(--soft)}
 .svc .price{grid-row:1/span 2;grid-column:2;font-family:var(--display);font-size:1.6rem;color:var(--teal);white-space:nowrap;font-variant-numeric:tabular-nums}
 .svc .pick{min-height:44px;grid-row:1/span 2;grid-column:3;border:1px solid #bcd7d3;background:transparent;border-radius:999px;padding:8px 14px;font-size:.8rem;font-weight:700;color:var(--teal);cursor:pointer;transition:all .2s;white-space:nowrap}
@@ -171,16 +172,17 @@ nav.main a:hover{color:var(--teal)}
 
 /* Destacados */
 .feat{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;margin-bottom:56px}
-.fcard{appearance:none;border:1px solid var(--line);background:var(--card);border-radius:14px;padding:0;overflow:hidden;cursor:pointer;text-align:left;display:grid;grid-template-columns:1fr auto;grid-template-rows:auto 1fr;transition:border-color .2s,box-shadow .2s,transform .2s;font:inherit;color:inherit}
+.fcard{appearance:none;border:1px solid var(--line);background:var(--card);border-radius:14px;padding:0;overflow:hidden;cursor:pointer;text-align:left;display:flex;flex-direction:column;transition:border-color .2s,box-shadow .2s,transform .2s;font:inherit;color:inherit;min-width:0}
 .fcard:hover{border-color:var(--teal);box-shadow:0 14px 30px rgba(18,32,32,.1);transform:translateY(-2px)}
-.fcard img{grid-column:1/-1;width:100%;aspect-ratio:4/3;object-fit:cover}
-.fbody{padding:14px 0 16px 16px;display:flex;flex-direction:column;gap:2px;min-width:0}
-.fbody b{font-weight:600;font-size:.95rem;line-height:1.3}
-.fbody span{font-size:.8rem;color:var(--soft)}
-.fprice{padding:14px 16px 0 10px;font-family:var(--display);font-size:1.5rem;color:var(--teal);white-space:nowrap}
+.fcard img{width:100%;aspect-ratio:4/3;object-fit:cover}
+.fbody{padding:14px 16px 16px;display:flex;flex-direction:column;gap:10px;flex:1;min-width:0}
+.fbody b{font-weight:600;font-size:.98rem;line-height:1.3;text-wrap:balance;overflow-wrap:anywhere}
+.frow{margin-top:auto;display:flex;justify-content:space-between;align-items:baseline;gap:10px}
+.frow > span:first-child{font-size:.8rem;color:var(--soft)}
+.fprice{font-family:var(--display);font-size:1.5rem;color:var(--teal);white-space:nowrap;line-height:1}
 .all-h{font-size:1.8rem;margin-bottom:18px}
 @media (max-width:900px){.feat{grid-template-columns:repeat(2,minmax(0,1fr))}}
-@media (max-width:420px){.feat{gap:10px}.fbody{padding:10px 0 12px 12px}.fprice{padding:10px 12px 0 6px;font-size:1.25rem}}
+@media (max-width:420px){.feat{gap:10px}.fbody{padding:12px}.fbody b{font-size:.9rem}.fprice{font-size:1.25rem}.frow{flex-wrap:wrap;gap:4px 10px}}
 /* Reserva */
 .book{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:20px;align-items:start}
 .panel{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:28px}
@@ -258,14 +260,29 @@ nav.main a:hover{color:var(--teal)}
 @media (max-width:820px){.gift-card{grid-template-columns:1fr;padding:28px 22px;gap:24px}}
 /* Opiniones */
 .reviews{border-top:0}
-.rev{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.6fr);gap:64px;align-items:start}
-.rev h2{font-size:clamp(2.6rem,5vw,4rem);letter-spacing:-.015em}
-.rev blockquote{margin:0;font-family:var(--display);font-style:italic;font-size:clamp(2rem,4vw,3.1rem);line-height:1.12;text-wrap:balance}
-.who{display:flex;align-items:center;flex-wrap:wrap;gap:12px;margin:20px 0 0;font-size:.9rem;color:var(--soft)}
+.rev-head{display:flex;justify-content:space-between;align-items:flex-end;gap:20px;flex-wrap:wrap;margin-bottom:36px}
+.rev-head h2{font-size:clamp(2.6rem,5vw,4rem);letter-spacing:-.015em}
+.who{display:flex;align-items:center;flex-wrap:wrap;gap:12px;margin:0;font-size:.92rem;color:var(--soft)}
 .who b{color:var(--fg)}
-.chips{list-style:none;padding:0;display:flex;flex-wrap:wrap;gap:8px;margin:26px 0 30px}
-.chips li{border:1px solid var(--line);border-radius:999px;padding:7px 14px;font-size:.84rem;color:var(--soft)}
-@media (max-width:760px){.rev{grid-template-columns:1fr;gap:28px}}
+.car-track{display:grid;grid-auto-flow:column;grid-auto-columns:calc((100% - 32px)/3);gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;scroll-behavior:smooth;padding-bottom:6px;scrollbar-width:none;overscroll-behavior-x:contain}
+.car-track::-webkit-scrollbar{display:none}
+.car-track:focus-visible{outline-offset:6px}
+.rcard{scroll-snap-align:start;margin:0;background:var(--bg-2);border-radius:16px;padding:30px 28px;display:flex;flex-direction:column;gap:18px;min-height:280px;min-width:0}
+.rcard blockquote{margin:0;font-family:var(--display);font-style:italic;font-size:clamp(1.5rem,2.4vw,1.9rem);line-height:1.18;text-wrap:balance;flex:1}
+.rcard figcaption{font-size:.85rem;color:var(--soft);font-weight:600}
+.rcard h3{font-size:1.7rem}
+.rcard p{margin:0;color:var(--soft)}
+.rcard .chips{list-style:none;padding:0;display:flex;flex-wrap:wrap;gap:8px;margin:0}
+.rcard .chips li{background:var(--card);border:1px solid var(--line);border-radius:999px;padding:7px 14px;font-size:.86rem;color:var(--fg)}
+.rcard-cta{background:linear-gradient(135deg,#e3f3f0,#f6fbfa 70%);border:1px solid #cfe4e0}
+.rcard-cta .ctas{margin-top:auto;flex-direction:column;align-items:stretch}
+.car-nav{display:flex;align-items:center;justify-content:center;gap:16px;margin-top:22px}
+.dots{display:flex;gap:4px}
+.dots button{width:28px;height:44px;border:0;background:transparent;cursor:pointer;display:grid;place-items:center;padding:0}
+.dots button::before{content:"";width:8px;height:8px;border-radius:999px;background:#c3d2cf;transition:width .25s,background .25s}
+.dots button[aria-current="true"]::before{width:22px;background:var(--teal)}
+@media (max-width:900px){.car-track{grid-auto-columns:calc((100% - 16px)/2)}}
+@media (max-width:560px){.car-track{grid-auto-columns:86%}.rcard{padding:24px 20px;min-height:240px}}
 
 /* Dudas */
 .faq-grid{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.6fr);gap:64px;align-items:start}
@@ -403,10 +420,10 @@ footer .wrap{padding-block:30px;display:flex;justify-content:space-between;align
         <p>Pulsa «Elegir» en el servicio que quieras y pasarás directamente a escoger día y hora.</p>
       </div>
       <div class="feat">
-        <button type="button" class="fcard" data-s="manicura-semi"><img src="img/n1.webp" alt="" loading="lazy"><span class="fbody"><b>Manicura semipermanente</b><span>40 min – 1 h</span></span><span class="fprice">17 €</span></button>
-        <button type="button" class="fcard" data-s="unas-acrilicas"><img src="img/n6.webp" alt="" loading="lazy"><span class="fbody"><b>Uñas acrílicas</b><span>1 h 30 min</span></span><span class="fprice">28 €</span></button>
-        <button type="button" class="fcard" data-s="relleno-acrilicas"><img src="img/n9.webp" alt="" loading="lazy"><span class="fbody"><b>Relleno de acrílicas</b><span>1 h 20 min</span></span><span class="fprice">25 €</span></button>
-        <button type="button" class="fcard" data-s="pedicura-semi"><img src="img/n8.webp" alt="" loading="lazy"><span class="fbody"><b>Pedicura semipermanente</b><span>40 min</span></span><span class="fprice">19 €</span></button>
+        <button type="button" class="fcard" data-s="manicura-semi"><img src="img/n1.webp" alt="" loading="lazy"><span class="fbody"><b>Manicura semipermanente</b><span class="frow"><span>40 min – 1 h</span><span class="fprice">17 €</span></span></span></button>
+        <button type="button" class="fcard" data-s="unas-acrilicas"><img src="img/n6.webp" alt="" loading="lazy"><span class="fbody"><b>Uñas acrílicas</b><span class="frow"><span>1 h 30 min</span><span class="fprice">28 €</span></span></span></button>
+        <button type="button" class="fcard" data-s="relleno-acrilicas"><img src="img/n9.webp" alt="" loading="lazy"><span class="fbody"><b>Relleno de acrílicas</b><span class="frow"><span>1 h 20 min</span><span class="fprice">25 €</span></span></span></button>
+        <button type="button" class="fcard" data-s="pedicura-semi"><img src="img/n8.webp" alt="" loading="lazy"><span class="fbody"><b>Pedicura semipermanente</b><span class="frow"><span>40 min</span><span class="fprice">19 €</span></span></span></button>
       </div>
       <h3 class="all-h">Todos los servicios</h3>
       <div class="tools">
@@ -420,16 +437,21 @@ footer .wrap{padding-block:30px;display:flex;justify-content:space-between;align
 
   <section class="sec reviews" id="opiniones" aria-labelledby="t-op">
     <div class="wrap">
-      <div class="rev">
+      <div class="rev-head">
         <h2 id="t-op">Lo que dicen <em>las clientas.</em></h2>
-        <div>
-          <blockquote>“Trato cercano, amable y muy profesional.”</blockquote>
-          <p class="who"><svg class="st-svg" viewBox="0 0 120 22" aria-hidden="true"><path transform="translate(0 0)" d="M11 1.5l2.8 6 6.5.7-4.9 4.4 1.4 6.4L11 15.8 5.2 19l1.4-6.4L1.7 8.2l6.5-.7Z"/><path transform="translate(24 0)" d="M11 1.5l2.8 6 6.5.7-4.9 4.4 1.4 6.4L11 15.8 5.2 19l1.4-6.4L1.7 8.2l6.5-.7Z"/><path transform="translate(48 0)" d="M11 1.5l2.8 6 6.5.7-4.9 4.4 1.4 6.4L11 15.8 5.2 19l1.4-6.4L1.7 8.2l6.5-.7Z"/><path transform="translate(72 0)" d="M11 1.5l2.8 6 6.5.7-4.9 4.4 1.4 6.4L11 15.8 5.2 19l1.4-6.4L1.7 8.2l6.5-.7Z"/><path transform="translate(96 0)" d="M11 1.5l2.8 6 6.5.7-4.9 4.4 1.4 6.4L11 15.8 5.2 19l1.4-6.4L1.7 8.2l6.5-.7Z"/></svg><span>Clienta verificada en Treatwell · media de <b>4,9</b></span></p>
-          <ul class="chips" aria-label="Lo que más destacan"><li>Trato impecable</li><li>Uñas que no se rompen</li><li>Diseños de tendencia</li><li>Muy recomendable</li></ul>
-          <div class="ctas">
-            <a class="btn btn-line" href="https://www.treatwell.es/establecimiento/naisthetic-center/" target="_blank" rel="noopener">Ver opiniones en Treatwell <svg class="arr" viewBox="0 0 16 16" aria-hidden="true"><path d="M5 11 11 5M6 5h5v5"/></svg></a>
-            <a class="btn btn-line" href="https://www.google.com/maps/search/?api=1&amp;query=Naisthetic%20Center%20Palencia" target="_blank" rel="noopener">Opinar en Google <svg class="arr" viewBox="0 0 16 16" aria-hidden="true"><path d="M5 11 11 5M6 5h5v5"/></svg></a>
-          </div>
+        <p class="who"><svg class="st-svg" viewBox="0 0 120 22" aria-hidden="true"><path transform="translate(0 0)" d="M11 1.5l2.8 6 6.5.7-4.9 4.4 1.4 6.4L11 15.8 5.2 19l1.4-6.4L1.7 8.2l6.5-.7Z"/><path transform="translate(24 0)" d="M11 1.5l2.8 6 6.5.7-4.9 4.4 1.4 6.4L11 15.8 5.2 19l1.4-6.4L1.7 8.2l6.5-.7Z"/><path transform="translate(48 0)" d="M11 1.5l2.8 6 6.5.7-4.9 4.4 1.4 6.4L11 15.8 5.2 19l1.4-6.4L1.7 8.2l6.5-.7Z"/><path transform="translate(72 0)" d="M11 1.5l2.8 6 6.5.7-4.9 4.4 1.4 6.4L11 15.8 5.2 19l1.4-6.4L1.7 8.2l6.5-.7Z"/><path transform="translate(96 0)" d="M11 1.5l2.8 6 6.5.7-4.9 4.4 1.4 6.4L11 15.8 5.2 19l1.4-6.4L1.7 8.2l6.5-.7Z"/></svg><span><b>4,9</b> de media en opiniones verificadas de Treatwell</span></p>
+      </div>
+      <div class="car" aria-roledescription="carrusel" aria-label="Opiniones de clientas">
+        <div class="car-track" id="carTrack" tabindex="0">
+          <figure class="rcard" aria-roledescription="opinión"><svg class="st-svg" viewBox="0 0 120 22" aria-hidden="true"><path transform="translate(0 0)" d="M11 1.5l2.8 6 6.5.7-4.9 4.4 1.4 6.4L11 15.8 5.2 19l1.4-6.4L1.7 8.2l6.5-.7Z"/><path transform="translate(24 0)" d="M11 1.5l2.8 6 6.5.7-4.9 4.4 1.4 6.4L11 15.8 5.2 19l1.4-6.4L1.7 8.2l6.5-.7Z"/><path transform="translate(48 0)" d="M11 1.5l2.8 6 6.5.7-4.9 4.4 1.4 6.4L11 15.8 5.2 19l1.4-6.4L1.7 8.2l6.5-.7Z"/><path transform="translate(72 0)" d="M11 1.5l2.8 6 6.5.7-4.9 4.4 1.4 6.4L11 15.8 5.2 19l1.4-6.4L1.7 8.2l6.5-.7Z"/><path transform="translate(96 0)" d="M11 1.5l2.8 6 6.5.7-4.9 4.4 1.4 6.4L11 15.8 5.2 19l1.4-6.4L1.7 8.2l6.5-.7Z"/></svg><blockquote>“Trato cercano, amable y muy profesional.”</blockquote><figcaption>Clienta verificada · Treatwell</figcaption></figure>
+          <figure class="rcard" aria-roledescription="opinión"><svg class="st-svg" viewBox="0 0 120 22" aria-hidden="true"><path transform="translate(0 0)" d="M11 1.5l2.8 6 6.5.7-4.9 4.4 1.4 6.4L11 15.8 5.2 19l1.4-6.4L1.7 8.2l6.5-.7Z"/><path transform="translate(24 0)" d="M11 1.5l2.8 6 6.5.7-4.9 4.4 1.4 6.4L11 15.8 5.2 19l1.4-6.4L1.7 8.2l6.5-.7Z"/><path transform="translate(48 0)" d="M11 1.5l2.8 6 6.5.7-4.9 4.4 1.4 6.4L11 15.8 5.2 19l1.4-6.4L1.7 8.2l6.5-.7Z"/><path transform="translate(72 0)" d="M11 1.5l2.8 6 6.5.7-4.9 4.4 1.4 6.4L11 15.8 5.2 19l1.4-6.4L1.7 8.2l6.5-.7Z"/><path transform="translate(96 0)" d="M11 1.5l2.8 6 6.5.7-4.9 4.4 1.4 6.4L11 15.8 5.2 19l1.4-6.4L1.7 8.2l6.5-.7Z"/></svg><blockquote>“Es un encanto de chica. Toda una profesional. 100% recomendable.”</blockquote><figcaption>Clienta verificada · Treatwell</figcaption></figure>
+          <div class="rcard rcard-theme"><h3>Lo que más repiten</h3><ul class="chips"><li>Trato impecable</li><li>Uñas que no se rompen</li><li>Diseños de tendencia</li><li>Muy recomendable</li></ul></div>
+          <div class="rcard rcard-cta"><h3>¿Ya has venido?</h3><p>Lee todas las opiniones o deja la tuya. A Naiara le ayuda muchísimo.</p><div class="ctas"><a class="btn btn-line" href="https://www.treatwell.es/establecimiento/naisthetic-center/" target="_blank" rel="noopener">Ver en Treatwell <svg class="arr" viewBox="0 0 16 16" aria-hidden="true"><path d="M5 11 11 5M6 5h5v5"/></svg></a><a class="btn btn-line" href="https://www.google.com/maps/search/?api=1&amp;query=Naisthetic%20Center%20Palencia" target="_blank" rel="noopener">Opinar en Google <svg class="arr" viewBox="0 0 16 16" aria-hidden="true"><path d="M5 11 11 5M6 5h5v5"/></svg></a></div></div>
+        </div>
+        <div class="car-nav">
+          <button type="button" class="mnav" id="carP" aria-label="Opinión anterior"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M10 3 5 8l5 5"/></svg></button>
+          <div class="dots" id="carDots"></div>
+          <button type="button" class="mnav" id="carN" aria-label="Opinión siguiente"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="m6 3 5 5-5 5"/></svg></button>
         </div>
       </div>
     </div>
@@ -689,6 +711,18 @@ footer .wrap{padding-block:30px;display:flex;justify-content:space-between;align
   $('lbX').addEventListener('click',close);$('lbP').addEventListener('click',function(){show(cur-1)});$('lbN').addEventListener('click',function(){show(cur+1)});
   $('lb').addEventListener('click',function(e){if(e.target===$('lb'))close()});
   document.addEventListener('keydown',function(e){if($('lb').hidden)return;if(e.key==='Tab'){var f=[$('lbX'),$('lbP'),$('lbW'),$('lbN')],i=f.indexOf(document.activeElement);e.preventDefault();var n=e.shiftKey?(i<=0?f.length-1:i-1):(i+1)%f.length;f[n].focus();return}if(e.key==='Escape')close();if(e.key==='ArrowLeft')show(cur-1);if(e.key==='ArrowRight')show(cur+1)});
+
+  // Carrusel de opiniones
+  var tr=$('carTrack'),cards=[].slice.call(tr.children),dots=$('carDots');
+  function per(){var c=cards[0].getBoundingClientRect().width;return Math.max(1,Math.round(tr.clientWidth/(c+16)))}
+  function pages(){return Math.max(1,cards.length-per()+1)}
+  function idx(){var c=cards[0].getBoundingClientRect().width+16;return Math.min(pages()-1,Math.round(tr.scrollLeft/c))}
+  function go(i){var c=cards[0].getBoundingClientRect().width+16;i=Math.max(0,Math.min(pages()-1,i));tr.scrollTo({left:i*c,behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth'})}
+  function drawDots(){var n=pages(),cur=idx();dots.innerHTML='';for(var i=0;i<n;i++){var b=document.createElement('button');b.type='button';b.setAttribute('aria-label','Ir a la opinión '+(i+1));if(i===cur)b.setAttribute('aria-current','true');(function(j){b.addEventListener('click',function(){go(j)})})(i);dots.appendChild(b)}$('carP').disabled=cur===0;$('carN').disabled=cur>=n-1}
+  $('carP').addEventListener('click',function(){go(idx()-1)});$('carN').addEventListener('click',function(){go(idx()+1)});
+  var rt;tr.addEventListener('scroll',function(){clearTimeout(rt);rt=setTimeout(drawDots,80)});
+  tr.addEventListener('keydown',function(e){if(e.key==='ArrowRight'){e.preventDefault();go(idx()+1)}if(e.key==='ArrowLeft'){e.preventDefault();go(idx()-1)}});
+  window.addEventListener('resize',drawDots);drawDots();
 
   renderFilters();renderList();renderChosen();renderExtra();renderCal();renderSlots();
 })();
